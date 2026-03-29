@@ -9,8 +9,7 @@ bnb_config = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype=torch.
 processor = AutoProcessor.from_pretrained(model_id)                                                                                                                                                     
 model = Qwen2VLForConditionalGeneration.from_pretrained(                                                                                                                                                  
     model_id, quantization_config=bnb_config, device_map="auto"                                                                                                                                     
-)                                                              
-
+)
 
 image = Image.open("/home/raymark/dev/i2c/google.png")
                                                                                                                                                                                                         
